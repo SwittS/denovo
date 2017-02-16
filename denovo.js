@@ -8,7 +8,7 @@ $('mode-chart').addClass('hide');
 $('funnel_1').addClass('hide');
 $('funnel_2').addClass('hide');
 
-$(table).click(function() {
+$(table).mouseenter(function() {
   $('a').click(function(event){
     event.preventDefault();
       var whichIndustry = $(this).attr('href');
