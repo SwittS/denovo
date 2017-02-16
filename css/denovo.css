@@ -15,6 +15,18 @@ mode-table tr td:last-child{
   white-space: nowrap !important;
 }
 
+@media screen and (max-width: 767px) {
+  .alt-table-responsive {
+    width: 100%;
+    margin-bottom: 15px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    border: 1px solid #dddddd;
+    -webkit-overflow-scrolling: touch;
+  }
+}
+
 h1 {
   text-align: center;
 }
