@@ -1,14 +1,18 @@
-// var table = $('mode-table').each(function() {
-//             });
-//
-// var table2 = "#table_3902da2621ff";
-//
-//
+$(window).scroll(function(){
+if ($(this).scrollTop() > 100) {
+  $('#scroll').fadeIn();
+} else {
+  $('#scroll').fadeOut();
+}
+});
+
+$('#scroll').click(function(){
+  $("html, body").animate({ scrollTop: 0}, 600);
+  return false;
+});
 
 $('a[href*=#]:not([href=#])').click(function() {
-    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
-        || location.hostname == this.hostname) {
-
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') || location.hostname == this.hostname){
         var target = $(this.hash);
         target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
            if (target.length) {
@@ -19,6 +23,13 @@ $('a[href*=#]:not([href=#])').click(function() {
         }
     }
 });
+
+// var table = $('mode-table').each(function() {
+//             });
+//
+// var table2 = "#table_3902da2621ff";
+//
+//
 // $('mode-table:not(#table_d0a6fb91d348)').addClass('hide');
 // $('mode-chart').addClass('hide');
 // $('funnel_1').addClass('hide');
