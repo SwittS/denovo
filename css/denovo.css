@@ -1,13 +1,13 @@
 mode-table td {
   font-family: "Futura", Arial, sans-serif !important;
-  border: 1px solid grey !important;
+  border: 1px solid #112D4E !important;
 }
 
 mode-table th {
-  background: #ADD8E6 !important;
+  background: #F9F7F7 !important;
   border: none !important;
   font-family: "Futura", Arial, sans-serif !important;
-  color: black !important;
+  color: #112D4E !important;
 }
 
 mode-table tr td:last-child{
