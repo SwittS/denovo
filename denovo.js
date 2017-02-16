@@ -9,7 +9,8 @@ $('funnel_1').addClass('hide');
 $('funnel_2').addClass('hide');
 
 $(table).click(function() {
-  $('a').click(function(){
+  $('a').click(function(event){
+    event.preventDefault();
       var whichIndustry = $(this).attr('href');
       if (whichIndustry === "#Banking%20Services"){
           $(table[4]).removeClass('hide');
