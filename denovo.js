@@ -14,25 +14,29 @@ $('#scroll').click(function(){
 var table = $('mode-table').each(function() {
             });
 
-$('mode-table:not(#table_d0a6fb91d348)').addClass('hide');
+var hideAllTables = $('mode-table:not(#table_d0a6fb91d348)').addClass('hide');
+
 $('funnel_1').addClass('hide');
 $('funnel_2').addClass('hide');
+
+hideAllTables();
 
 $(table).mouseenter(function() {
   $('a').on("click", function(e){
       e.preventDefault();
       var whichIndustry = $(this).attr('href');
-      
-      var $this = $(this).parent().find('mode-table');
-      $('.col-md-12').not($this).hide();
-      $this.toggle();
-
       if (whichIndustry === "#Banking%20Services"){
+        if(!mode-table.hasClass('banking-services')){
+          hideAllTables();
+        }
           $('.banking-services').removeClass('hide');
           $('html, body').animate({
           scrollTop: $('.banking-services').offset().top
         }, 1000);
       } else if (whichIndustry === "#Capital%20Markets"){
+        if(!mode-table.hasClass('capital-markets')){
+          hideAllTables();
+        }
           $('.capital-markets').removeClass('hide');
           $('html, body').animate({
           scrollTop: $('.capital-markets').offset().top
