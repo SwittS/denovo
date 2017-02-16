@@ -19,9 +19,14 @@ $('funnel_1').addClass('hide');
 $('funnel_2').addClass('hide');
 
 $(table).mouseenter(function() {
-  $('a').on("click", function(event){
-    event.preventDefault();
+  $('a').on("click", function(e){
+      e.preventDefault();
       var whichIndustry = $(this).attr('href');
+      
+      var $this = $(this).parent().find('mode-table');
+      $('.col-md-12').not($this).hide();
+      $this.toggle();
+
       if (whichIndustry === "#Banking%20Services"){
           $('.banking-services').removeClass('hide');
           $('html, body').animate({
