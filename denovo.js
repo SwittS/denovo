@@ -14,11 +14,7 @@ $('#scroll').click(function(){
 var table = $('mode-table').each(function() {
             });
 
-// var table2 = "#table_3902da2621ff";
-
-
 $('mode-table:not(#table_d0a6fb91d348)').addClass('hide');
-$('mode-chart').addClass('hide');
 $('funnel_1').addClass('hide');
 $('funnel_2').addClass('hide');
 
@@ -32,7 +28,10 @@ $(table).mouseenter(function() {
           scrollTop: $('.banking-services').offset().top
         }, 1000);
       } else if (whichIndustry === "#Capital%20Markets"){
-        console.log('Capital Markets was clicked!');
+          $('.capital-markets').removeClass('hide');
+          $('html, body').animate({
+          scrollTop: $('.capital-markets').offset().top
+        }, 1000);
       } else if (whichIndustry === "#Insurance"){
         console.log('Insurance was clicked!');
       } else if (whichIndustry === "#Investment%20&%20Wealth%20Management"){
