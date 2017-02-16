@@ -3,10 +3,10 @@ var table = $('mode-table').each(function() {
 
 var table2 = "#table_3902da2621ff";
 
-$('mode-table:not(#table_d0a6fb91d348)').addClass('hide');
-$('mode-chart').addClass('hide');
-$('funnel_1').addClass('hide');
-$('funnel_2').addClass('hide');
+// $('mode-table:not(#table_d0a6fb91d348)').addClass('hide');
+// $('mode-chart').addClass('hide');
+// $('funnel_1').addClass('hide');
+// $('funnel_2').addClass('hide');
 
 $(table).mouseenter(function() {
   $('a').on("click", function(event){
@@ -29,17 +29,4 @@ $(table).mouseenter(function() {
         console.log('Transaction & Payment Services was clicked!');
       }
   });
-});
-
-$(window).scroll(function(){
-  if ($(this).scrollTop() > 50) {
-    $('#scroll').fadeIn();
-  } else {
-    $('#scroll').fadeOut();
-  }
-});
-
-$('#scroll').click(function(){
-  $("html, body").animate({ scrollTop: 0}, 600);
-  return false;
 });
