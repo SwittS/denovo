@@ -25,7 +25,7 @@ $(table).mouseenter(function(){
     e.preventDefault();
     var whichIndustry = $(this).attr('href').toLowerCase().replace(/[^a-zA-Z0-9 ]+/g,"").replace(/\s+/g, "").replace(/\d+/g, '-');
     $.each(dict, function(key, value){
-      if(this !== key){
+      if(whichIndustry !== key){
         $(value).addClass('hide');
       } else {
         $(value).removeClass('hide');
