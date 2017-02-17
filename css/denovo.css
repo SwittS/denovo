@@ -14,8 +14,12 @@ h1 {
   text-align: center;
 }
 
-.hide {
+html body * {
   display: none;
+}
+
+.active {
+  display: block;
 }
 
 #scroll {
