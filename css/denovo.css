@@ -10,16 +10,17 @@ mode-table th {
   color: #112D4E !important;
 }
 
+mode-table tr td:last-child{
+  width: 1% !important;
+  white-space: nowrap !important;
+}
+
 h1 {
   text-align: center;
 }
 
-html body * {
+.hide {
   display: none;
-}
-
-.active {
-  display: block;
 }
 
 #scroll {

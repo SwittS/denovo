@@ -15,9 +15,9 @@ $('#scroll').click(function(){
 // scroll to table and show function
 var table = $('mode-table').each(function(){});
 
-// $('mode-table:not(#table_d0a6fb91d348, #table_ff996ca9a36d)').addClass('hide');
-// $('funnel_1').addClass('hide');
-// $('funnel_2').addClass('hide');
+$('mode-table:not(#table_d0a6fb91d348, #table_ff996ca9a36d)').addClass('hide');
+$('funnel_1').addClass('hide');
+$('funnel_2').addClass('hide');
 
 $(table).mouseenter(function() {
   $('a').on("click", function(e){
